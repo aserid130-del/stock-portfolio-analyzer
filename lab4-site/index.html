@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навигатор по цифровой библиотеке</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f5f7fa;
+    }
+
+    header {
+      background: #1f4e79;
+      color: white;
+      padding: 48px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 12px;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin: 0 auto;
+      max-width: 720px;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #d9e1e8;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 12px 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #1f4e79;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+    }
+
+    main {
+      width: min(1000px, calc(100% - 32px));
+      margin: 32px auto;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 24px;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #1f4e79;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .card {
+      border: 1px solid #d9e1e8;
+      border-radius: 10px;
+      padding: 18px;
+      background: #fafcff;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #244f75;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccd6df;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eaf2f8;
+    }
+
+    .tip {
+      padding: 14px 16px;
+      background: #eef6ff;
+      border-left: 4px solid #1f4e79;
+      border-radius: 6px;
+      margin-top: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 16px 36px;
+      color: #4b5563;
+    }
+
+    footer a {
+      color: #1f4e79;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 36px 16px;
+      }
+
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      main {
+        width: min(100% - 20px, 1000px);
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="top">
+    <h1>Навигатор по цифровой библиотеке</h1>
+    <p>
+      Учебная страница для студентов, которая помогает быстро понять,
+      где искать электронные книги, научные статьи и учебные материалы.
+    </p>
+  </header>
+
+  <nav aria-label="Основная навигация">
+    <ul>
+      <li><a href="#about">О сайте</a></li>
+      <li><a href="#resources">Материалы</a></li>
+      <li><a href="#guide">Как искать</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>О сайте</h2>
+      <p>
+        Навигатор предназначен для студентов, которым нужно быстро выбрать
+        подходящий тип цифрового источника для учёбы. Страница показывает,
+        какие материалы можно использовать для подготовки к занятиям,
+        самостоятельной работы и поиска дополнительной информации.
+      </p>
+
+      <div class="tip">
+        Главное действие пользователя — выбрать нужный тип материала
+        и понять, где его лучше искать.
+      </div>
+    </section>
+
+    <section id="resources">
+      <h2>Материалы цифровой библиотеки</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Электронные книги</h3>
+          <p>
+            Подходят для изучения темы по учебнику, повторения теории
+            и подготовки к занятиям.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Научные статьи</h3>
+          <p>
+            Полезны, когда нужно найти более подробную информацию,
+            современные исследования и аргументы для учебной работы.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Учебные материалы</h3>
+          <p>
+            Конспекты, методические материалы и справочные документы
+            помогают повторять темы и выполнять задания.
+          </p>
+        </article>
+      </div>
+
+      <h3>Что выбрать?</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Тип материала</th>
+            <th>Когда использовать</th>
+            <th>Что проверить</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Электронная книга</td>
+            <td>Для изучения темы и базовой теории</td>
+            <td>Автор, название, год издания</td>
+          </tr>
+          <tr>
+            <td>Научная статья</td>
+            <td>Для подробного анализа и исследования</td>
+            <td>Автор, источник публикации, дата</td>
+          </tr>
+          <tr>
+            <td>Учебный материал</td>
+            <td>Для подготовки к занятиям и повторения</td>
+            <td>Соответствие дисциплине и теме</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="guide">
+      <h2>Как искать материалы</h2>
+      <ol>
+        <li>Определите тему или ключевое слово.</li>
+        <li>Выберите подходящий тип материала.</li>
+        <li>Проверьте автора, название и дату публикации.</li>
+        <li>Сравните несколько источников перед использованием.</li>
+        <li>Сохраните полезные материалы для дальнейшей работы.</li>
+      </ol>
+
+      <p>
+        Для учебной работы важно использовать понятные и проверяемые источники,
+        а также внимательно читать информацию перед тем, как ссылаться на неё.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Учебный проект по дисциплине ИКТ.</p>
+    <p><a href="#top">К началу страницы</a></p>
+  </footer>
+</body>
+</html>
